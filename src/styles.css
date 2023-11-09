@@ -1,7 +1,51 @@
 /**
 * CSS file to hold styles that apply across the application
 */
+/* add an amazing animation to the social icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-10px);
+}
+
+.social-icons a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover:before {
+  transform: scale(1);
+}
+
+.social-icons a i {
+  position: relative;
+  z-index: 1;
+}
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
 
 html,
